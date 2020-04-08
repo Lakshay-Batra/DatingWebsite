@@ -1,0 +1,72 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+
+h2.inline {
+    display: inline;
+    color: teal;
+}
+
+.signin-btn {
+    margin: 2% 1%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 1% 0 1%;
+}
+
+.my {
+    margin-top: 0;
+}
+
+.welcome-container img {
+    width: 100%;
+    margin: 3% 0 0;
+}
+
+.features {
+    background-color: #f3f4f9;
+    padding: 7% 4% 3%;
+}
+
+.col-md-4 {
+    padding: 2% 0;
+}
+
+.move-right {
+    padding-left: 10%;
+}
+
+.left, .middle {
+    color: grey;
+    padding: 3% 25%;
+}
+
+.left {
+    padding: 3% 30%;
+}
+
+.right {
+    color: grey;
+    padding: 5% 30%;
+}
+
+.downloads {
+    background-color: #ffa41b;
+    padding: 7% 14%;
+    color: white;
+}
+
+.download-btns .btn {
+    margin: 1%;
+    margin-top: 3%;
+}
+
+@media (max-width: 995px) {
+    h1, h2 {
+        font-size: 4vw;
+    }
+}
