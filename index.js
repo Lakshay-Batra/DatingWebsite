@@ -1,3 +1,4 @@
+$("iframe").attr("src","matches-template.html");
 $("#a").on("click", () => {
     var $elem = $('body');
     $("iframe").attr("src","matches-template.html");

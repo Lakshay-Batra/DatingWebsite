@@ -284,3 +284,17 @@ iframe {
     background-color: whitesmoke;
     margin: 5% 10%;
 }
+
+/* upgarde */
+
+.top-header {
+    background-color: grey;
+    color: white;
+    margin-bottom: 0;
+}
+.bottom-header {
+    background-color: green;
+    color: ivory;
+    margin-top: 0;
+    padding: 1% 0;
+}
