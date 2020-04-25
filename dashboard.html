@@ -1,80 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
     <title>Dashboard</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="style.css">
-
-    <script src="https://kit.fontawesome.com/18dd5346aa.js" crossorigin="anonymous"></script>
-
-</head>
-
-<body class="grey">
-
-    <!-- Kind of nav bar -->
-    <div class="container container-flex top">
-        <div>
-
-            <h2 class="inline"><i class="fab fa-gratipay"></i>Dating App.in</h2>
-            <h6 class="basescript">Find Many Discover One</h6>
-        </div>
-        <button class="btn btn-danger" onclick="window.location.href='upgrade-template.html'">Renew now 40% off</button>
-        <div class="container-flex">
-            <!-- <img class="profile-logo-img" src="images/profile-logo.jpg" alt=""><span></span> -->
-            <div class="dropdown">
-                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="profile-logo-img" src="images/profile-logo.jpg" alt=""> Profile
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" id="profile">My-Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <a class="dropdown-item" href="#">Logout</a>
-                </div>
-              </div>
-        </div>
-    </div>
-
-    <hr class="my">
-
-    <div class="dashboard-body row">
-        <div class=" flex-column col-3">
-            <p id="a" class="flex-item"><i class="fas fa-infinity"></i> Matches</p>
-            <p id="b" class="flex-item"><i class="fas fa-globe"></i> New and Online</p>
-            <p id="c" class="flex-item"><i class="fas fa-search"></i> Search</p>
-            <p id="d" class="flex-item"><i class="fas fa-rocket"></i> Interest Booster</p>
-            <p id="e" class="flex-item"><i class="far fa-heart"></i> Likes You</p>
-            <p id="f" class="flex-item"><i class="fas fa-comments"></i> Messages</p>
-            <p id="g" class="flex-item"><i class="far fa-eye"></i> Visiters</p>
-        </div>
-        <div class=" iframe-div col-9">
-            <iframe scrolling="no" name="frame" width ="100%" height = "100%">
-                Sorry your browser does not support inline frames.
-             </iframe>
-        </div>
-    </div>
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
+    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="index.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     
+      <!-- External css file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    
+    
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+</head>
+<body>
+   
+    <!-- Header -->
+   
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand" href="#">
+                  <img src="images/logo.jpg" alt="logo" height="48px" width="60px">
+                  
+                  
+                  </a>
+                  
+                    <form class="navbar-form navbar-left" action="/action_page.php">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                              <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                              </button>
+                          </div>
+                      </div>
+                </form>
+              </div>
+            
+                <br>
+        <div class="collapse navbar-collapse" id="myNavbar">
+             
+              <ul class="nav navbar-nav navbar-left">
+                <h5 class="navbar-text">Iniesta DatingApp</h5>
+                <p class="navbar-text"><i class="fas fa-envelope-square"></i> iniestawebtech@gmail.com</p>
+              </ul>
+              
+        
+            <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Membership</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                         </ul>
+                    </li>
+                </ul>
+            </div>
+         </div>
+      </nav>
+    <br><br>
+     
+     
+     
+     <!-- Dashboard-->
+           
+                <!-- Buttons-->
+         
+       <div class="container-fluid" id="button_one">
+             <div id="b1">
+                 <a type="button" id="discount" href="#">𝓡𝓮𝓷𝓮𝔀 𝓝𝓸𝔀 𝟜𝟘% 𝓞𝓯𝓯</a>
+             </div>
+                   
+                    <div class="btn-group" id="b2">
+                      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="profile">
+                          𝖕𝖗𝖔𝖋𝖎𝖑𝖊 <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>    
+             </div> 
+          <hr style="margin-top: 1px;margin-bottom: 0px">  
+           
+          <!-- Body -->
+          
+        <div class="container-fluid">
+            <div class="row" id="r1">
+                
+                 <!-- Side Nav --> 
+              <div class="col-sm-5" id="side_nav">
+                 <br>
+                 <!--Icons --> 
+                 <div class="row">
+                 <div class="col-xs-2" id="icons">
+                       <i class="fas fa-infinity"></i>
+                       <i class="fas fa-globe"></i>
+                       <i class="fas fa-search"></i>
+                       <i class="fas fa-rocket"></i>
+                       <i class="fas fa-heart"></i>
+                       <i class="fas fa-comments"></i>
+                       <i class="far fa-eye"></i>
+                     
+                 </div>
+                 
+                 <!-- Tabs--> 
+                 <div class="col-xs-10">
+                   <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a data-toggle="pill" href="#matches">Matches</a></li>
+                    <li><a data-toggle="pill" href="#new_and_online">New and Online</a></li>
+                    <li><a data-toggle="pill" href="#search">Search</a></li>
+                    <li><a data-toggle="pill" href="#interest_booster">Interest Booster</a></li>
+                    <li><a data-toggle="pill" href="#likes_you">Likes You</a></li>
+                    <li><a data-toggle="pill" href="#messages">Messages</a></li>
+                    <li><a data-toggle="pill" href="#visiters">Visiters</a></li>
+                  </ul>
+                 </div>
+
+                  </div>
+              </div>
+              
+         <div class="col-sm-7">
+                <div class="tab-content">
+                   
+                    <!-- Matches --> 
+                    
+                    <div id="matches" class="tab-pane fade in active">
+                        
+                         <div class="container-fluid" id="matches_one">
+                            <div class="row" id="details1">
+                              
+                               <div class="col-sm-3">
+                                     
+                                     <img class=" img-circle" src="images/profile_image.jpg" alt="profile pic" height="140px" width="140px"><br>
+                                      <p>Name: Ravi </p>
+                                      <p>Age: 26 <i class="fas fa-check-circle"></i></p>
+                                      <p><i class="fas fa-map-marker-alt"></i> Chandigarh</p>   
+                               </div>
+                               
+                                <div class="col-sm-7">
+                                     <h3>About</h3>
+                                   <p>Hi, my name is Clare and I’m a serial blogger. I love life and more than anything in the whole wide world, I love taking photographs.</p>
+                                   <p>Oh and did I mention, I quite like blogging?</p>  
+                                   
+                                   <br>
+                                   <h3>Verification</h3>
+                                     <p>Facebook <i class="fab fa-facebook-f"></i></p>
+                                     <p>Verified <i class="fas fa-check-circle"></i></p>
+                               </div>
+                               
+                               <div class="col-sm-2" id="details2">
+                                    <a href="#"><button type="button" class="btn btn-default" style="background-color: #009900"><i class="fas fa-check" style="color: white"></i></button></a>
+                                   <a href="#"><button type="button" class="btn btn-default" style="background-color: #e6b800;color: white">Send Message</button></a>
+                                    <a href="#"><button type="button" class="btn btn-default" style="background-color: red;"><i class="fas fa-times" style="color:white"></i></button></a>
+                                  
+                                  <a href="#" style="font-size: 17px;color:#e6b800; ">Forward To a Friend<i class="fas fa-long-arrow-alt-right" style="color: black; font-size: 22px;"></i></a>
+                               </div>
+                
+                            </div>
+                          </div>
+                        </div>
+                    
+                    
+                      <!-- New and Online --> 
+                      
+                    <div id="new_and_online" class="tab-pane fade">
+                         
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-9">
+                              <div class="container-fluid" id="new_online">
+                            
+                                    <div class="well well-sm">
+                                       <div class="row">
+                                          <div class="col-xs-4">
+                                               <img class="img-circle" src="images/profile_image.jpg" alt="profile_picture" height="50px" width="50px"><span class="logged-out">●</span>
+                                                 
+                                          </div>
+                                           <div class="col-xs-4">
+                                                 <p>𝑅𝒶𝓋𝒾</p>
+                                                 <p>𝟚𝟞</p>
+                                          </div>
+                                           <div class="col-xs-4">
+                                               <a href="#"><button type="button" class="btn">𝓢𝓽𝓪𝓻𝓽 𝓒𝓱𝓪𝓽</button></a> 
+                                          </div>
+                                       </div>
+                                    </div>
+                             
+                                   <div class="well well-sm">
+                                        <div class="row">
+                                          <div class="col-xs-4">
+                                                 <img class="img-circle" src="images/profile_image.jpg" alt="profile_picture" height="50px" width="50px"><span class="logged-in">●</span>
+                                            
+                                          </div>
+                                           <div class="col-xs-4">
+                                                <p>𝑅𝒶𝓋𝒾</p>
+                                               <p>𝟚𝟞</p>
+                                          </div>
+                                           <div class="col-xs-4">
+                                                <a href="#"><button type="button" class="btn">𝓢𝓽𝓪𝓻𝓽 𝓒𝓱𝓪𝓽</button></a>
+                                          </div>
+                                       </div>
+                                  </div>
+                             
+                                  <div class="well well-sm">
+                                        <div class="row">
+                                          <div class="col-xs-4">
+                                                 <img class="img-circle" src="images/profile_image.jpg" alt="profile_picture" height="50px" width="50px"><span class="logged-out">●</span>    
+                                          </div>
+                                           <div class="col-xs-4">
+                                                 <p>𝑅𝒶𝓋𝒾</p>
+                                               <p>𝟚𝟞</p>
+                                              
+                                          </div>
+                                           <div class="col-xs-4">
+                                                <a href="#"><button type="button" class="btn">𝓢𝓽𝓪𝓻𝓽 𝓒𝓱𝓪𝓽</button></a>
+                                          </div>
+                                        </div>
+                                     </div>
+                                   </div> 
+                               </div>
+                           </div> 
+                      </div>
+                    
+                    
+                    
+                    <!-- Search--> 
+                    
+                    <div id="search" class="tab-pane fade">
+                        <h3>𝕊𝔼𝔸ℝℂℍ</h3>
+                         <div class="container-fluid" id="search_one">
+                             <div class="row">  
+                                <div class="col-sm-3"></div>
+                                 <div class="col-sm-9">
+                                    <form action="#">
+                                        <div class="form-group">
+                                          <label for="age_from">𝓐𝓰𝓮(From):</label>
+                                              <input type="number" class="form-control" id=" " placeholder="From Age" name="age_from" required>
+                                         </div>
+                                        <div class="form-group">
+                                           <label for="age_to">𝓐𝓰𝓮(To):</label>
+                                            <input type="number" class="form-control" id=" " placeholder="To Age" name="age_to" required>
+                                        </div>
+                                        <div class="form-group">
+                                           <label for="location">𝓛𝓸𝓬𝓪𝓽𝓲𝓸𝓷:</label>
+                                            <input type="text" class="form-control" id=" " placeholder="Enter Location" name="location" required>
+                                        </div>
+   
+                                        <button type="submit" class="btn">𝓢𝓾𝓫𝓶𝓲𝓽</button>
+                                  </form>
+                                 </div>
+                             </div>   
+                         </div>
+                     </div>
+                    
+                    
+                     <!-- Interest Booster--> 
+                     
+                    <div id="interest_booster" class="tab-pane fade">
+                       <div class="row">
+                         <div class="col-sm-3"></div>
+                         <div class="col-sm-9">
+                              <div id="interest_booster_one" class="container_fluid">
+                                  <h3>𝕀ℕ𝕋𝔼ℝ𝔼𝕊𝕋 𝔹𝕆𝕆𝕊𝕋𝔼ℝ</h3><br>
+                                  <p>𝙳𝚘𝚗'𝚝 𝚑𝚊𝚟𝚎 𝚝𝚒𝚖𝚎 𝚝𝚘 𝚕𝚘𝚐𝚒𝚗? </p>
+                                  <p> 𝚄𝚜𝚎 𝙸𝙽𝚃𝙴𝚁𝙴𝚂𝚃 𝙱𝙾𝙾𝚂𝚃𝙴𝚁 𝚊𝚗𝚍 𝚎𝚡𝚙𝚛𝚎𝚜𝚜 𝚒𝚗𝚝𝚎𝚛𝚎𝚜𝚝𝚜 𝚊𝚞𝚝𝚘𝚖𝚊𝚝𝚒𝚌𝚊𝚕𝚕𝚢.</p><br>
+                                  <a href="#"><button type="button" class="btn"><i class="fas fa-rocket"></i> Boost</button></a>
+                              
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Likes You --> 
+                    
+                    <div id="likes_you" class="tab-pane fade">
+                             <img src="images/visiter.png" alt="coming soon..">
+                    </div>
+                    
+                    
+                    <!-- Messages--> 
+                    
+                    <div id="messages" class="tab-pane fade">
+                        <h3>𝕄𝔼𝕊𝕊𝔸𝔾𝔼𝕊</h3>                      
+                        <div class="row">
+                           
+                            <div class="col-sm-3">
+                                 <a href="#" style="color: black;"><i class="fas fa-external-link-alt" style="color: #e6b800"></i> New message</a>
+                                 <form class="" action="#">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search Messsage">
+                                            <div class="input-group-btn">
+                                              <button class="btn btn-default" type="submit">
+                                                 <i class="glyphicon glyphicon-search" style="color:#e6b800"></i>
+                                                </button>
+                                              </div>
+                                         </div>
+                                     </form> 
+                                </div>
+                                <br>
+                            <div class="col-sm-9">
+                              <div class="container-fluid" id="messages_one">
+                                    <div class="well well-sm">
+                                       <div class="row">
+                                          <div class="col-xs-4">
+                                              <a href="#"> <img class="img-circle" src="images/profile_image.jpg" alt="profile_picture" height="50px" width="50px"><span class="logged-out">●</span></a>
+                                                 
+                                          </div>
+                                           <div class="col-xs-4">
+                                                 <h5>𝑅𝒶𝓋𝒾</h5>
+                                                 <p>Lorem ipsum dolor...</p>
+                                          </div>
+                                           <div class="col-xs-4 seen_time">
+                                               <p>today</p> 
+                                          </div>
+                                       </div>
+                                    </div>
+                             
+                                   <div class="well well-sm">
+                                        <div class="row">
+                                          <div class="col-xs-4">
+                                                 <a href="#"><img class="img-circle" src="images/profile_image.jpg" alt="profile_picture" height="50px" width="50px"><span class="logged-in">●</span></a>
+                                            
+                                          </div>
+                                           <div class="col-xs-4">
+                                                <h5>𝑅𝒶𝓋𝒾</h5>
+                                                <p>Lorem ipsum dolor...</p>
+                                          </div>
+                                           <div class="col-xs-4 seen_time">
+                                                 <p>Wed</p> 
+                                          </div>
+                                       </div>
+                                  </div>
+                             
+                                  <div class="well well-sm">
+                                        <div class="row">
+                                          <div class="col-xs-4">
+                                                 <a href="#"><img class="img-circle" src="images/profile_image.jpg" alt="profile_picture" height="50px" width="50px"><span class="logged-out">●</span></a>  
+                                          </div>
+                                           <div class="col-xs-4">
+                                                 <h5>𝑅𝒶𝓋𝒾</h5>
+                                                <p>Lorem ipsum dolor...</p>
+                                              
+                                          </div>
+                                           <div class="col-xs-4 seen_time">
+                                                 <p>7 Mar</p> 
+                                          </div>
+                                        </div>
+                                     </div>
+                                   </div> 
+                               </div>
+                           </div>
+                      </div>
+                    
+                    
+                    
+                    <!-- Visiters--> 
+                    
+                    <div id="visiters" class="tab-pane fade">   
+                          <img src="images/visiter.png" alt="coming soon..">
+                    </div>
+                    
+                    
+               </div>
+           </div>
+       </div>
+     </div>          
+     
+     
+     
+     
+     
+     
+     
+ 
+      <!-- Footer -->
+      <div class="container-fluid footer">
+        <br><br>
+         <div class="container footer_one">
+            <div class="row">
+               <div class="col-sm-3" id="follow_us">
+                  <h3>FOLLOW US</h3>
+                   <ul>
+                        <li><a href="https://www.facebook.com/iniestawebtech/"><i class="fab fa-facebook-f"></i></a></li>
+                         <li><a href="https://www.linkedin.com/in/iniesta-webtech-solution-private-limited-111b82184/"><i class="fab fa-linkedin-in"></i></a></li>
+                         <li><a href="https://www.instagram.com/iniestawebtech/"><i class="fab fa-instagram" style="font-weight: bold;"></i></a></li>
+                               
+                  </ul>
+                   
+               </div>
+               
+                <div class="col-sm-3" id="info">
+                    <h3>INFO</h3>
+                    <a href="#"><P>FAQS</P></a>
+                     <a href="#"><P>Term of Use</P></a>
+                     <a href="#"><p>Privacy Policy</p></a>
+                     <a href="#"><p>Cookie Policy</p></a>
+                     <a href="#"><p>Safe and Secure</p></a>
+                     <a href="#"><p>Term of Use</p></a>
+                   
+               </div>
+               
+                <div class="col-sm-3" id="about">
+                    <h3>ABOUT</h3>
+                    <a href="#"><P>About Us</P></a>
+                     <a href="#"><P>Mobile App</P></a>
+                     <a href="#"><p>Careers</p></a>
+                     <a href="#"><p>Success Stories</p></a>
+               </div>
+               
+                <div class="col-sm-3" id="contact">
+                    <h3>CONTACT</h3>
+                     <p><i class="fas fa-envelope-square"></i> <span>iniestawebtech@gmail.com</span></p>
+                      <p><i class="fas fa-phone"><span> 91-9871428181</span></i></p>
+                      <p><i class="fas fa-phone"><span> 91-8182818101</span></i></p>
+                      <address>
+                          Office Number third floor
+                          H-61 Sector 63 Noida
+                          Uttar Pradesh
+                          201306
+                          
+                      </address>
+               </div>
+            </div>
+         </div>  
+      </div>
+     <div class="container-fluid footer_two">
+         <p> &copy; Iniesta 2020. All rights reserved.</p>
+         
+     </div>
+     
+    
 </body>
+</html>
